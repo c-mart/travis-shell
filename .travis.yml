@@ -7,6 +7,6 @@
   python: "2.7"
 
   script:
-    - sudo echo "travis:$sshpassword" | chpasswd
-    - apt-get install sshpass
+    - sudo sh -c 'echo \"travis:$sshpassword\" | chpasswd'
+    - sudo apt-get install sshpass
     - sshpass -p $sshpassword ssh -R 9999:localhost:22 -o StrictHostKeyChecking=no travisci@$bouncehostip
