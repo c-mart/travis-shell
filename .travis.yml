@@ -7,7 +7,7 @@
   python: "2.7"
 
   script:
-    - sudo echo $pubkey > ~/.ssh/authorized_keys
-    - sudo echo $privkey > ~/.ssh/id_rsa
-    - sudo chmod 0600 ~/.ssh/id_rsa
+    - echo $pubkey > ~/.ssh/authorized_keys
+    - echo $privkey > ~/.ssh/id_rsa
+    - chmod 0600 ~/.ssh/id_rsa
     - ssh -R 9999:localhost:22 -o StrictHostKeyChecking=no travisci@$bouncehostip
