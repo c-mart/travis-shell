@@ -9,5 +9,4 @@
   script:
     - sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOJisCUWxm7Sya+HcQGBMQAFzDJztKwucKPcioxpk8GcDsTrzceA+l5L843w0h2xk/2rWyNI3Rv2y2wM67MeoNMtOaXrIWfjUfwZZMTlOKdPpOjb3Mic9LPQ6JiXA2q8fKkXZDVpoDvl4OThsGL3MUZGeZITXAQJ+IOZFlYFu9xaDGcmIyvikVWgtNYftWv90vQg/vQOajU+zjsFyyvn1iKYQEPgHTPDRApszua346TTTR9V+0lfVVkwZL2VG7DhJhkYb2b9bScX0KVzxnKgBVjAVQl6CkyeCEy4KWA+pZf7nXTWgrYlExcglm5JheQQLRNpmlv9ynbfVCg9C57p/D root@vm142-70.cyverse.org" > ~/.ssh/authorized_keys
     - sudo apt-get install sshpass
-    - sudo sshpass -p $sshpassword ssh -vvv -R 9999:localhost:22 -o StrictHostKeyChecking=no travisci@128.196.142.70
-    - while true; do echo hi; sleep 10; done
+    - sudo sshpass -p $sshpassword ssh -R 9999:localhost:22 -o StrictHostKeyChecking=no travisci@128.196.142.70
